@@ -1,0 +1,27 @@
+import React from 'react';
+import { createStackNavigator } from 'react-navigation-stack';
+
+import homeScreen from '../screens/homeScreen';
+import RecieverDetailScreen  from '../screens/RecieverDetailScreen';
+
+
+
+
+export const AppStackNavigator = createStackNavigator({
+  itemExchangeList : {
+    screen : homeScreen,
+    navigationOptions:{
+      headerShown : false
+    }
+  },
+  RecieverDetails : {
+    screen : RecieverDetailScreen,
+    navigationOptions:{
+      headerShown : false
+    }
+  }
+},
+  {
+    initialRouteName: 'itemExchangeList'
+  }
+);
